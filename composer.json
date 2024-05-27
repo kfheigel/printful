@@ -1,0 +1,22 @@
+{
+    "name": "heigel/printful",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Heigel\\Printful\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kheigel",
+            "email": "kfheigel@gmail.com"
+        }
+    ]
+}
