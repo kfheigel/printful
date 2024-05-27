@@ -1,4 +1,4 @@
-run: build up composer-install cache-clear seed
+run: build up composer-install
 test: unit-tests 
 
 build:
@@ -19,8 +19,5 @@ composer-install:
 sleep:
 	sleep 5
 
-cache-clear:
-	docker exec -it app bin/console cache:clear
-
 unit-tests:
-	docker exec -it app ./bin/phpunit -c phpunit.xml --testdox --testsuite unit
+	docker exec -it app vendor/bin/phpunit --testdox --testsuite unit

@@ -1,5 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
+namespace App\Infrastructure\HttpClient\Factory;
+
 use GuzzleHttp\Client;
 
 final class ClientFactory

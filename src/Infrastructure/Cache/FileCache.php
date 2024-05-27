@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\InfraStructure\Cache;
+namespace App\Infrastructure\Cache;
 
 use App\Domain\Cache\CacheInterface;
 
-class FileCache implements CacheInterface
+final class FileCache implements CacheInterface
 {
     private $cacheDir;
 

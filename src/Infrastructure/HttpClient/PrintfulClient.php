@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-require_once 'src/Domain/HttpClient/PrintfulClientInterface.php';
-require_once 'src/Infrastructure/HttpClient/Factory/ClientFactory.php';
+namespace App\Infrastructure\HttpClient;
 
 use App\Domain\Cache\CacheInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use App\Domain\HttpClient\PrintfulClientInterface;
+use App\Infrastructure\HttpClient\Factory\ClientFactory;
 
-class PrintfulClient implements PrintfulClientInterface
+final class PrintfulClient implements PrintfulClientInterface
 {
     private string $productId = '12';
     private string $sellingRegionName = 'worldwide';
