@@ -1,5 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
+use App\InfraStructure\Cache\FileCache;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once 'src/Infrastructure/HttpClient/PrintfulClient.php';
 require_once 'src/Domain/Extractor/ExtractColor.php';

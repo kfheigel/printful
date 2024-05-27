@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once 'src/Domain/HttpClient/PrintfulClientInterface.php';
 require_once 'src/Infrastructure/HttpClient/Factory/ClientFactory.php';
 
+use App\Domain\Cache\CacheInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use App\Domain\HttpClient\PrintfulClientInterface;
 

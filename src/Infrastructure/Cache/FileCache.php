@@ -1,6 +1,10 @@
 <?php
 
-use CacheInterface;
+declare(strict_types=1);
+
+namespace App\InfraStructure\Cache;
+
+use App\Domain\Cache\CacheInterface;
 
 class FileCache implements CacheInterface
 {
