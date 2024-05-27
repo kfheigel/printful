@@ -16,6 +16,9 @@ bash:
 composer-install:
 	docker exec -it app composer install
 
+request:
+	docker exec -it app php bin/StartCommand.php
+
 sleep:
 	sleep 5
 
