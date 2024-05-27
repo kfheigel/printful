@@ -11,7 +11,7 @@ use App\Tests\Fixtures\ResponseArrayMother;
 final class ColorExtractorTest extends TestCase
 {
     /** @test */
-    public function extract_colors_from_data()
+    public function extract_colors_from_data(): void
     {
         // given
         $givenInputData = ResponseArrayMother::create();
@@ -26,7 +26,7 @@ final class ColorExtractorTest extends TestCase
     }
 
     /** @test */
-    public function extract_with_empty_colors()
+    public function extract_with_empty_colors(): void
     {
         // given
         $givenInputData = ['data' => ['colors' => []]];
@@ -40,7 +40,7 @@ final class ColorExtractorTest extends TestCase
     }
 
     /** @test */
-    public function extract_with_no_colors_key()
+    public function extract_with_no_colors_key(): void
     {
         // given
         $givenInputData = ['data' => []];

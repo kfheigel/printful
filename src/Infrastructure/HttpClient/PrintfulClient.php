@@ -34,7 +34,7 @@ final class PrintfulClient implements PrintfulClientInterface
         return $response;
     }
 
-    private function apiRequest()
+    private function apiRequest(): ?string
     {
         $printfulClient = ClientFactory::createHttpClient();
         

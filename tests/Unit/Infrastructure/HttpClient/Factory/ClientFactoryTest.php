@@ -11,7 +11,7 @@ use App\Infrastructure\HttpClient\Factory\ClientFactory;
 final class ClientFactoryTest extends TestCase
 {
     /** @test */
-    public function create_http_client_with_correct_base_uri()
+    public function create_http_client_with_correct_base_uri(): void
     {
         $client = ClientFactory::createHttpClient();
 
@@ -21,7 +21,7 @@ final class ClientFactoryTest extends TestCase
     }
 
     /** @test */
-    public function create_http_client_with_correct_authorization_header()
+    public function create_http_client_with_correct_authorization_header(): void
     {
         $client = ClientFactory::createHttpClient();
 

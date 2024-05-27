@@ -15,7 +15,7 @@ final class FileCache implements CacheInterface
         $this->cacheDir = $cacheDir;
     }
 
-    public function set(string $key, $value, int $duration)
+    public function set(string $key, $value, int $duration): ?string
     {
         $cacheFile = $this->getCacheFile($key);
         $data = [
@@ -26,7 +26,7 @@ final class FileCache implements CacheInterface
         return $value;
     }
 
-    public function get(string $key)
+    public function get(string $key): ?string
     {
         $cacheFile = $this->getCacheFile($key);
         if (!file_exists($cacheFile)) {

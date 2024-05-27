@@ -27,7 +27,7 @@ final class FileCacheTest extends TestCase
     }
 
     /** @test */
-    public function set_cache_and_get_a_value()
+    public function set_cache_and_get_a_value(): void
     {
         // given
         $givenKey = 'givenKey';
@@ -42,7 +42,7 @@ final class FileCacheTest extends TestCase
     }
 
     /** @test */
-    public function returns_null_for_non_existing_key()
+    public function returns_null_for_non_existing_key(): void
     {
         // given
         $cache = new FileCache($this->cacheDir);
@@ -52,7 +52,7 @@ final class FileCacheTest extends TestCase
     }
 
     /** @test */
-    public function expire_value()
+    public function expire_value(): void
     {
         // given
         $givenKey = 'givenKey';
@@ -68,7 +68,7 @@ final class FileCacheTest extends TestCase
     }
 
     /** @test */
-    public function delete_expired_file()
+    public function delete_expired_file(): void
     {
         // given
         $givenKey = 'givenKey';

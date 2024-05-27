@@ -11,7 +11,7 @@ use App\Tests\Fixtures\ResponseArrayMother;
 final class SizeExtractorTest extends TestCase
 {
     /** @test */
-    public function extract_sizes_from_data()
+    public function extract_sizes_from_data(): void
     {
         // given
         $givenInputData = ResponseArrayMother::create();
@@ -25,7 +25,7 @@ final class SizeExtractorTest extends TestCase
     }
 
     /** @test */
-    public function extract_with_empty_sizes()
+    public function extract_with_empty_sizes(): void
     {
         // given
         $givenInputData = ['data' => ['sizes' => []]];
@@ -39,7 +39,7 @@ final class SizeExtractorTest extends TestCase
     }
 
     /** @test */
-    public function extract_with_no_sizes_key()
+    public function extract_with_no_sizes_key(): void
     {
         // given
         $givenInputData = ['data' => []];

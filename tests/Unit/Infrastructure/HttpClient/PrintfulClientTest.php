@@ -31,7 +31,7 @@ final class PrintfulClientTest extends TestCase
         $this->replaceClientFactory();
     }
 
-    private function replaceClientFactory()
+    private function replaceClientFactory(): void
     {
         $reflection = new ReflectionClass(ClientFactory::class);
         $method = $reflection->getMethod('createHttpClient');
@@ -44,7 +44,7 @@ final class PrintfulClientTest extends TestCase
     }
 
     /** @test */
-    public function return_cached_response_if_available()
+    public function return_cached_response_if_available(): void
     {
         // given
         $givenCachedResponse = 'cached_response';
@@ -60,7 +60,7 @@ final class PrintfulClientTest extends TestCase
     }
 
     /** @test */
-    public function fetch_product_variants_and_cache_response()
+    public function fetch_product_variants_and_cache_response(): void
     {
         //given 
         $givenApiResponse = ResponseJsonMother::create();
