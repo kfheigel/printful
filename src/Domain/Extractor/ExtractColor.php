@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
-class ExtractColor
+require_once 'src/Domain/Extractor/ExtractorInterface.php';
+
+use App\Domain\Extractor\ExtractorInterface;
+
+class ExtractColor implements ExtractorInterface
 {
     public static function extract(array $data): array
     {

@@ -42,6 +42,6 @@ class FileCache implements CacheInterface
 
     private function getCacheFile($key)
     {
-        return $this->cacheDir . DIRECTORY_SEPARATOR . md5($key) . '.cache';
+        return sprintf('%s%s%s%s', $this->cacheDir, DIRECTORY_SEPARATOR, md5($key), '.cache');
     }
 }

@@ -5,11 +5,11 @@ declare(strict_types=1);
 use App\InfraStructure\Cache\FileCache;
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once 'src/Infrastructure/HttpClient/PrintfulClient.php';
-require_once 'src/Domain/Extractor/ExtractColor.php';
-require_once 'src/Domain/Extractor/ExtractSize.php';
-require_once 'src/Domain/Cache/CacheInterface.php';
-require_once 'src/Infrastructure/Cache/FileCache.php';
+require_once __DIR__ . '/Infrastructure/HttpClient/PrintfulClient.php';
+require_once __DIR__ . '/Domain/Extractor/ExtractColor.php';
+require_once __DIR__ . '/Domain/Extractor/ExtractSize.php';
+require_once __DIR__ . '/Domain/Cache/CacheInterface.php';
+require_once __DIR__ . '/Infrastructure/Cache/FileCache.php';
 
 $cacheDir = __DIR__ . '/../var/cache';
 

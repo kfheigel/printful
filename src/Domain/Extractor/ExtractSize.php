@@ -2,7 +2,11 @@
 
 declare(strict_types=1);
 
-class ExtractSize
+require_once 'src/Domain/Extractor/ExtractorInterface.php';
+
+use App\Domain\Extractor\ExtractorInterface;
+
+class ExtractSize implements ExtractorInterface
 {
     public static function extract(array $data): array
     {
