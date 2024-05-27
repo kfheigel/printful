@@ -6,7 +6,7 @@ namespace App\Tests\Unit\Domain\Extractor;
 
 use PHPUnit\Framework\TestCase;
 use App\Domain\Extractor\SizeExtractor;
-use App\Tests\Fixtures\ResponseJsonMother;
+use App\Tests\Fixtures\ResponseArrayMother;
 
 final class SizeExtractorTest extends TestCase
 {
@@ -14,7 +14,7 @@ final class SizeExtractorTest extends TestCase
     public function extract_sizes_from_data()
     {
         // given
-        $givenInputData = ResponseJsonMother::create();
+        $givenInputData = ResponseArrayMother::create();
         $expectedResult = ['sizes' => ["S","M","L","XL","2XL","3XL"]];
 
         // when 

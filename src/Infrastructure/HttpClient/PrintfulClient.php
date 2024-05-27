@@ -6,15 +6,12 @@ namespace App\Infrastructure\HttpClient;
 
 use App\Domain\Cache\CacheInterface;
 use GuzzleHttp\Exception\GuzzleException;
+use App\Domain\Config\PrintfulClientConfig;
 use App\Domain\HttpClient\PrintfulClientInterface;
 use App\Infrastructure\HttpClient\Factory\ClientFactory;
 
 final class PrintfulClient implements PrintfulClientInterface
 {
-    private string $productId = '12';
-    private string $sellingRegionName = 'worldwide';
-    private string $cacheKey = 'product_variants_api_response';
-
     private $cache;
 
     public function __construct(CacheInterface $cache)
@@ -24,7 +21,7 @@ final class PrintfulClient implements PrintfulClientInterface
 
     public function getProductVariants(): ?string
     {
-        $cachedResponse = $this->cache->get($this->cacheKey);
+        $cachedResponse = $this->cache->get(PrintfulClientConfig::CACHE_KEY);
         
         if ($cachedResponse !== null) {
             return $cachedResponse;
@@ -32,7 +29,7 @@ final class PrintfulClient implements PrintfulClientInterface
 
         $response = $this->apiRequest();
 
-        $this->cache->set($this->cacheKey, $response, 300);
+        $this->cache->set(PrintfulClientConfig::CACHE_KEY, $response, 300);
 
         return $response;
     }
@@ -42,9 +39,9 @@ final class PrintfulClient implements PrintfulClientInterface
         $printfulClient = ClientFactory::createHttpClient();
         
         try {
-            $response = $printfulClient->get($this->productId, [
+            $response = $printfulClient->get(PrintfulClientConfig::PRODUCT_ID, [
                 'query' => [
-                    'selling_region_name' => $this->sellingRegionName,
+                    'selling_region_name' => PrintfulClientConfig::SELLING_REGION_NAME,
                 ],
             ]);
 

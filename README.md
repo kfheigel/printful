@@ -9,7 +9,7 @@ Run project using make command:
 ```bash  
  make run  
 ```  
-this command will start project in docker containers. The project will be available on localhost:8081
+this command will start project in docker containers.
 
 ```bash  
  make down  

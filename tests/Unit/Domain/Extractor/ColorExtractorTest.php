@@ -6,7 +6,7 @@ namespace App\Tests\Unit\Domain\Extractor;
 
 use PHPUnit\Framework\TestCase;
 use App\Domain\Extractor\ColorExtractor;
-use App\Tests\Fixtures\ResponseJsonMother;
+use App\Tests\Fixtures\ResponseArrayMother;
 
 final class ColorExtractorTest extends TestCase
 {
@@ -14,7 +14,7 @@ final class ColorExtractorTest extends TestCase
     public function extract_colors_from_data()
     {
         // given
-        $givenInputData = ResponseJsonMother::create();
+        $givenInputData = ResponseArrayMother::create();
         $expectedResult = ['colors' => ["Black","Dark Heather","Navy","Sport Grey","White"]];
 
         // when 

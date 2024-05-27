@@ -27,7 +27,7 @@ final class FileCacheTest extends TestCase
     }
 
     /** @test */
-    public function sets_cahce_and_gets_a_value()
+    public function set_cache_and_get_a_value()
     {
         // given
         $givenKey = 'givenKey';
@@ -52,7 +52,7 @@ final class FileCacheTest extends TestCase
     }
 
     /** @test */
-    public function expires_a_value()
+    public function expire_value()
     {
         // given
         $givenKey = 'givenKey';
@@ -68,7 +68,7 @@ final class FileCacheTest extends TestCase
     }
 
     /** @test */
-    public function it_deletes_expired_file()
+    public function delete_expired_file()
     {
         // given
         $givenKey = 'givenKey';
