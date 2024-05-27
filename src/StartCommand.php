@@ -11,7 +11,7 @@ require_once 'src/Domain/Extractor/ExtractSize.php';
 require_once 'src/Domain/Cache/CacheInterface.php';
 require_once 'src/Infrastructure/Cache/FileCache.php';
 
-$cacheDir = __DIR__ . '/cache';
+$cacheDir = __DIR__ . '/../var/cache';
 
 if (!is_dir($cacheDir)) {
     mkdir($cacheDir, 0777, true);
