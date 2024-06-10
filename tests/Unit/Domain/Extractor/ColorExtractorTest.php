@@ -20,7 +20,6 @@ final class ColorExtractorTest extends TestCase
         // when 
         $extractedColors = ColorExtractor::extract($givenInputData);
 
-
         // then
         $this->assertEquals($expectedResult, $extractedColors);
     }
