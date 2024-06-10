@@ -22,5 +22,5 @@ request:
 sleep:
 	sleep 5
 
-test:
+unit-tests:
 	docker exec -it app vendor/bin/phpunit --testdox --testsuite unit
